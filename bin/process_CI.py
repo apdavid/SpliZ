@@ -49,8 +49,12 @@ def main():
     elif args.libraryType == 'SS2':
       df['id'] = df['id'].str.split('.').str[0]
       df["cell_id"] = df["id"].astype(str)
+    elif args.libraryType == 'SS2SE':
+      df['id'] = df['id'].str.split('.').str[0]
+      df["cell_id"] = df["id"].astype(str)
+    else:
+      raise ValueError("Unsupported library type: {}".format(args.libraryType))
 
-  
     dfs.append(df)
 
   full_df = pd.concat(dfs)

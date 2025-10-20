@@ -9,6 +9,8 @@ Initial release of nf-core/spliz, created with the [nf-core](https://nf-co.re/) 
 
 ### `Added`
 
+Added single-end read SS2 library (SS2SE)
+
 ### `Fixed`
 
 ### `Dependencies`
