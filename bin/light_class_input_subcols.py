@@ -224,10 +224,10 @@ def main():
     spatial_bar = True
 
   if args.libraryType == "SS2SE":
-  UMI_bar = False
-  stranded_library = False
-  cellranger = False
-  spatial_bar = True
+    UMI_bar = False
+    stranded_library = False
+    cellranger = False
+    spatial_bar = False
 
   for j in range(n_rounds):
     if j == 1:
