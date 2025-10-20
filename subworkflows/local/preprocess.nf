@@ -34,7 +34,19 @@ workflow PREPROCESS {
                         )
                     }
                 convert_bam = true
-            } 
+            } else if (params.libraryType == 'SS2SE') {
+                ch_bam = Channel.fromPath(params.samplesheet)
+                    .splitCsv(header:false)
+                    .map { row ->
+                        tuple( 
+                            row[0],         // bam file sample_ID
+                            file(row[1])    // SE bam file path 
+                        )
+                    }
+                convert_bam = true
+            } else {
+                exit 1, "Invalid libraryType; options are 'SS2SE', 'SS2', '10X', and 'SLS'."
+            }
         }
     } else if (params.input_file) {
         input_file = file(params.input_file)

@@ -11,6 +11,10 @@ This pipeline uses code and infrastructure developed and maintained by the [nf-c
 >
 > Nat Biotechnol. 2020 Feb 13. doi: 10.1038/s41587-020-0439-x.
 
+## Changes
+
+1. Added an SS2SE option for SS2 data with single end reads.
+
 ## Quick Start
 
 1. Install [`nextflow`](https://nf-co.re/usage/installation) (`>=20.04.0`) and [`conda`](https://docs.conda.io/en/latest/).
