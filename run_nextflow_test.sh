@@ -17,7 +17,7 @@ echo "Log -- Date: $(date)"
 
 conda activate nf-spliz-env
 # nextflow run salzmanlab/spliz -r main -latest -c petipre_sgn_2022.config -N abel.david@vanderbilt.edu
-nextflow run . -r main -c petipre_sgn_test.config -N abel.david@vanderbilt.edu
+nextflow run . -c petipre_sgn_test.config -N abel.david@vanderbilt.edu
 
 echo "Log -- Date: $(date)"
 echo "Log -- End Job" 
